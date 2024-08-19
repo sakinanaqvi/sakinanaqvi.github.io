@@ -1,0 +1,246 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo {
+    height: 50px;
+}
+.navbar {
+    display: flex;
+    align-items: right;
+    justify-content: space-between; /* Pushes items to opposite ends */
+}
+
+/* Style the menu */
+.navbar-menu {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 10;
+}
+
+/* Style each menu item */
+.navbar-item {
+    margin-top: 20px;
+    margin-left: 20px; /* Space between items */
+}
+
+.navbar-item:first-child {
+    margin-top: 0px;
+    margin-left: 20px; 
+    margin-right: 950px;
+}
+
+/* Style for navigation links */
+.navbar-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: #03312e; /* Text color */
+    font-family: Georgia, serif;
+}
+.navbar-item a:hover {
+    background-color: #011514; /* Darker background color */
+    color: #fff; /* Ensure text color remains visible */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #A6C48A;
+    color: #03312e;
+    padding: 10px 0;
+    text-align: right;
+    position: relative;
+    z-index: 1000; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Added margin reset to ensure proper spacing */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #03312e;
+    text-decoration: none;
+}
+
+main {
+    flex: 1; /* Allows main content to grow and shrink */
+    background: #A6C48A;
+    color: #03312e;
+    padding: 20px;
+    overflow: auto; /* Allows scrolling if content overflows */
+    box-sizing: border-box; /* Includes padding in the height calculation */
+}
+
+#home h2 {
+    font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+    font-size: 10rem; /* Changed to rem for better scalability */
+    padding: 100px 0;
+    margin-top: 10px;
+    line-height: 1.1; /* Adjusted for better readability */
+    text-align: center;
+    color: #03312e; /* Ensure color is set */
+}
+#about h2 {
+    font-size: 40px;
+    text-align: center;
+}
+.header-link {
+    color: #03312e; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Font size */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Font style */
+}
+
+.header-link:hover {
+    color: #011514; /* Change text color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.about-content {
+    display: flex;
+    margin-top: -60px;
+    font-size: 20px;
+    height: 70vh; /* Takes full viewport height */
+}
+
+.text-section {
+    flex: 1; /* Takes up half of the container's width */
+    padding: 80px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    font-family: Georgia, serif;
+
+}
+
+.image-section {
+    flex: 0 0 40%; /* Takes up the specified width */
+    display: flex;
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.image-section img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+}
+
+#typing-container {
+    margin-top: -100px;
+    height: 0.5rem; 
+    text-align: center;
+}
+
+#typewriter-text {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #333;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for caret blink effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}
+
+.socials img {
+    width: 40px; 
+    height: 40px; 
+    vertical-align: middle; 
+}
+.project {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+}
+#education, #experience, #cs, #pm {
+    max-width: 2000px; /* Limits the width of the section */
+    margin: 5px auto; /* Centers the section horizontally with some margin */
+    padding: 5px;
+    background: #A6C48A; /* Matches the main content background color */
+    color: #fff; /* Ensures text is readable */
+    box-sizing: border-box; /* Ensures padding is included in the height and width */
+}
+
+h1 {
+    font-size: 2.5rem; 
+    color:#03312e;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.education-list, .experience-list, .cs-list, .pm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+.education-item, .experience-item, .cs-item, .pm-item {
+    background: #1a3a40; /* Darker background for individual items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.education-item h2, .experience-item h2, .cs-item h2, .pm-item h2 {
+    font-size: 1.2rem;
+    font-family: Georgia, serif;
+    margin: 0 0 5px; /* Margin below title */
+}
+.language {
+    font-style: italic;
+    font-family: Georgia, serif;
+    color: #a0c4c9; /* Slightly lighter color for time periods */
+    margin: 0 0 5px;
+}
+.time-period {
+    font-style: italic;
+    font-family: Georgia, serif;
+    color: #a0c4c9; /* Slightly lighter color for time periods */
+    margin: 0 0 5px; /* Margin below time period */
+}
+
+.description {
+    font-size: 1rem;
+    font-family: Georgia, serif;
+}
+
+
+/* Ensure footer is at the bottom of the page */
+footer {
+    background: #A6C48A;
+    color: #03312e;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Ensures it does not overlap content */
+    width: 100%;
+    bottom: 0;
+}
